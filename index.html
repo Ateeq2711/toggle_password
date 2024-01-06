@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Password Toggle</title>
+  </head>
+  <body>
+    <div class="input-box">
+      <input type="password" placeholder="password" id="password" />
+      <img id="eyeicon" src="Images/eye-close.png" alt="" />
+    </div>
+
+    <script>
+      let eyeicon = document.getElementById("eyeicon");
+      let password = document.getElementById("password");
+
+      eyeicon.onclick = function () {
+        if (password.type == "password") {
+          password.type = "text";
+          eyeicon.src = "Images/eye-open.png";
+        } else {
+          password.type = "password";
+          eyeicon.src = "Images/eye-close.png";
+        }
+      };
+    </script>
+  </body>
+</html>
